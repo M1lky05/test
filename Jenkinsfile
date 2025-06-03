@@ -36,7 +36,7 @@ pipeline {
         withCredentials([string(credentialsId: 'SONAR_TOKEN', variable: 'SONAR_TOKEN')]) {
           bat '''
           set SONAR_TOKEN=%SONAR_TOKEN%
-          sonar-scanner.bat
+          'sonar-scanner.bat'
           '''
         }
       }
