@@ -31,7 +31,7 @@ pipeline {
         bat 'npm audit || exit /b 0'
       }
     }
-    stage('SonarCloud Analysis') {
+    stage('Sonar Cloud analysis') {
       steps {
         withCredentials([string(credentialsId: 'SONAR_TOKEN', variable: 'SONAR_TOKEN')]) {
           bat '''
